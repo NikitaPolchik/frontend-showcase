@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="js/main.js" defer></script>
+    <title>Frontend showcase</title>
+  </head>
+  <body>
+    <div>
+      <header>
+        <h1>&lt;header&gt;</h1>
+        <p>Introductory content, site branding, or page/section navigation.</p>
+        <search>
+          <h2>&lt;search&gt;</h2>
+          <p>search landmark for all related controls and elements</p>
+          <form>
+            <label>&lt;label&gt;</label>
+            <input placeholder="placeholder" />
+            <button type="submit">search &lt;button&gt;</button>
+          </form>
+        </search>
+      </header>
+      <nav>
+        <h1>&lt;nav&gt;</h1>
+        <p>Primary navigation links.</p>
+        <ul>
+          <li><a href="#">HTML</a></li>
+          <li><a href="#">HTML + CSS</a></li>
+          <li><a href="#">HTML + CSS + JS</a></li>
+        </ul>
+      </nav>
+      <main>
+        <h1>&lt;main&gt;</h1>
+        <p>
+          The dominant, non-repeating content unique to the page(only one per
+          document).
+        </p>
+        <div>
+          <h2>&lt;span&gt; in action</h2>
+          <p>
+            Generic inline element used for targeted styling or scripting.
+            <strong
+              ><span class="span-styled"
+                >This text is inside span: styled off.</span
+              ></strong
+            >
+          </p>
+        </div>
+        <dl>
+          <dt><h2>&lt;dl&gt;</h2></dt>
+          <dd>
+            Description list container, term/key, and term value/description.
+          </dd>
+        </dl>
+        <details open>
+          <summary>
+            <strong>&lt;details&gt;</strong>
+          </summary>
+          <p>interactive collapsible container</p>
+
+          <form action="/submit-feedback" method="POST">
+            <fieldset>
+              <legend>&lt;fieldset&gt;</legend>
+
+              <div>
+                <label for="username">&lt;input&gt;</label>
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  placeholder="placeholder"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="framework">&lt;datalist&gt;</label>
+                <input
+                  type="text"
+                  id="framework"
+                  name="framework"
+                  list="framework-options"
+                  placeholder="placeholder"
+                />
+                <datalist id="framework-options">
+                  <option value="<option>"></option>
+                  <option value="<optioin>"></option>
+                  <option value="<option>"></option>
+                  <option value="<option>"></option>
+                </datalist>
+              </div>
+
+              <div>
+                <label for="experience">&lt;select&gt;</label>
+                <select id="experience" name="experience">
+                  <option value="junior">&lt;option&gt;</option>
+                  <option value="mid">&lt;option&gt;</option>
+                  <option value="senior">&lt;option&gt;</option>
+                </select>
+              </div>
+              <div>
+                <label for="profile-completion">&lt;meter&gt;</label>
+                <meter
+                  id="profile-completion"
+                  min="0"
+                  max="100"
+                  value="75"
+                  low="33"
+                  high="66"
+                  optimum="100"
+                >
+                  75%
+                </meter>
+              </div>
+
+              <div>
+                <label for="upload-progress">&lt;progress&gt;</label>
+                <progress id="upload-progress" value="60" max="100">
+                  60%
+                </progress>
+              </div>
+
+              <div>
+                <label for="comments">&lt;textarea&gt;</label><br />
+                <textarea
+                  id="comments"
+                  name="comments"
+                  rows="4"
+                  cols="40"
+                  placeholder="placeholder"
+                ></textarea>
+              </div>
+            </fieldset>
+            <br />
+            <button type="submit">submit &lt;button&gt;</button>
+            <button
+              type="button"
+              onclick="document.getElementById('confirm-modal').showModal()"
+            >
+              modal &lt;button&gt;
+            </button>
+          </form>
+        </details>
+        <dialog id="confirm-modal">
+          <h3>&lt;dialog&gt;</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim,
+            laudantium?
+          </p>
+          <form method="dialog">
+            <button>Close &lt;button&gt;</button>
+          </form>
+        </dialog>
+      </main>
+      <section>
+        <h1>&lt;section&gt;</h1>
+        <p>
+          A thematic grouping of content, typically accompanied by a heading.
+        </p>
+      </section>
+      <article>
+        <h1>&lt;article&gt;</h1>
+        <p>
+          Self-contained, independently distributable content(e.g., blog post,
+          comment, product card).
+        </p>
+        <figure>
+          <h2>&lt;figure/figcaption&gt;</h2>
+          <p>
+            Self-contained media graphic/code block paired with a descriptive
+            caption.
+          </p>
+          <img
+            src="/asssets/images/snippet.jpg"
+            width="100"
+            height="100"
+            alt="some picture"
+          />
+          <figcaption>Example picture.</figcaption>
+        </figure>
+      </article>
+      <aside>
+        <h1>&lt;aside&gt;</h1>
+        <p>
+          Indirectly related content(e.g., sidebars, calloutboxes, related
+          links).
+        </p>
+      </aside>
+      <footer>
+        <h1>&lt;footer&gt;</h1>
+        <p>Page or section metadata, copyright notices, or secondary links.</p>
+        <address>
+          <h1>&lt;address&gt;</h1>
+          <p>For contact info, automatically changes text to italics</p>
+        </address>
+      </footer>
+    </div>
+  </body>
+</html>

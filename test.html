@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Card Component</title>
+    <style>
+      /* -------------------------------------------------------------
+       1. Base Reset & Root Variables
+       ------------------------------------------------------------- */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        /* Colors */
+        --color-bg: #f8fafc;
+        --color-surface: #ffffff;
+        --color-text-main: #0f172a;
+        --color-text-muted: #64748b;
+        --color-primary: #2563eb;
+        --color-border: #e2e8f0;
+
+        /* rem Spacing Scale (based on default 1rem = 16px) */
+        --space-xs: 0.5rem; /* 8px */
+        --space-sm: 0.75rem; /* 12px */
+        --space-md: 1rem; /* 16px */
+        --space-lg: 1.5rem; /* 24px */
+        --space-xl: 2rem; /* 32px */
+      }
+
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          sans-serif;
+        background-color: var(--color-bg);
+        color: var(--color-text-main);
+        line-height: 1.5;
+        padding: var(--space-xl) var(--space-md);
+      }
+
+      /* -------------------------------------------------------------
+       2. Grid Layout Container (Mobile-First)
+       ------------------------------------------------------------- */
+      .card-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: var(--space-lg);
+        max-width: 75rem; /* 1200px max container width */
+        margin: 0 auto;
+      }
+
+      /* -------------------------------------------------------------
+       3. Flexbox Card Component
+       ------------------------------------------------------------- */
+      .card {
+        display: flex;
+        flex-direction: column; /* Stacks image, content, and footer vertically */
+        background-color: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-0.25rem); /* -4px */
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      }
+
+      .card__image {
+        width: 100%;
+        height: 12.5rem; /* 200px */
+        object-fit: cover;
+      }
+
+      /* Card Content Area */
+      .card__content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1; /* Drives full height so footers align across uneven text */
+        padding: var(--space-lg);
+      }
+
+      .card__tag {
+        align-self: flex-start;
+        font-size: 0.75rem; /* 12px */
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--color-primary);
+        margin-bottom: var(--space-xs);
+      }
+
+      .card__title {
+        font-size: 1.25rem; /* 20px */
+        font-weight: 600;
+        line-height: 1.3;
+        margin-bottom: var(--space-sm);
+      }
+
+      .card__description {
+        font-size: 0.9375rem; /* 15px */
+        color: var(--color-text-muted);
+        margin-bottom: var(--space-lg);
+      }
+
+      /* Card Footer (Pinned to bottom via margin-top: auto) */
+      .card__footer {
+        margin-top: auto;
+        padding-top: var(--space-md);
+        border-top: 1px solid var(--color-border);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .card__author {
+        font-size: 0.875rem; /* 14px */
+        font-weight: 500;
+      }
+
+      .card__btn {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--color-surface);
+        background-color: var(--color-primary);
+        padding: var(--space-xs) var(--space-md);
+        border: none;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      /* -------------------------------------------------------------
+       4. Responsive Media Queries (Using rem)
+       ------------------------------------------------------------- */
+      /* Tablet: 2-column layout at 40rem (~640px) */
+      @media (min-width: 40rem) {
+        .card-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* Desktop: 3-column layout at 64rem (~1024px) */
+      @media (min-width: 64rem) {
+        .card-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card-grid">
+      <!-- Card Item 1 -->
+      <article class="card">
+        <img
+          class="card__image"
+          src="https://picsum.photos/400/250?random=1"
+          alt="Architecture abstract"
+        />
+        <div class="card__content">
+          <span class="card__tag">Design</span>
+          <h2 class="card__title">Responsive Layout Patterns</h2>
+          <p class="card__description">
+            Learn how to combine CSS Grid and Flexbox to create fluid,
+            accessible layouts that adapt seamlessly across devices.
+          </p>
+          <div class="card__footer">
+            <span class="card__author">Alex Chen</span>
+            <a href="#" class="card__btn">Read More</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card Item 2 -->
+      <article class="card">
+        <img
+          class="card__image"
+          src="https://picsum.photos/400/250?random=2"
+          alt="Code on screen"
+        />
+        <div class="card__content">
+          <span class="card__tag">Engineering</span>
+          <h2 class="card__title">CSS Units & Accessibility</h2>
+          <p class="card__description">
+            Understanding why relative units like rem and em are essential for
+            low-vision users zooming text in modern browsers.
+          </p>
+          <div class="card__footer">
+            <span class="card__author">Sarah Miller</span>
+            <a href="#" class="card__btn">Read More</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card Item 3 -->
+      <article class="card">
+        <img
+          class="card__image"
+          src="https://picsum.photos/400/250?random=3"
+          alt="Laptop workspace"
+        />
+        <div class="card__content">
+          <span class="card__tag">Frontend</span>
+          <h2 class="card__title">Modern CSS Reset Strategies</h2>
+          <p class="card__description">
+            A short guide on resetting default browser styles to maintain
+            consistent box-sizing and typography baselines.
+          </p>
+          <div class="card__footer">
+            <span class="card__author">Jordan Lee</span>
+            <a href="#" class="card__btn">Read More</a>
+          </div>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
