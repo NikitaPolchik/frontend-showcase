@@ -60,7 +60,7 @@
           </summary>
           <p>interactive collapsible container</p>
 
-          <form action="/submit-feedback" method="POST">
+          <form action="/submit-feedck" method="POST">
             <fieldset>
               <legend>&lt;fieldset&gt;</legend>
 
@@ -150,16 +150,21 @@
             laudantium?
           </p>
           <form method="dialog">
-            <button>Close &lt;button&gt;</button>
+            <button type="button">Close &lt;button&gt;</button>
           </form>
         </dialog>
+        <menu class="toolbar">
+          <h2>&lt;menu&gt;</h2>
+          <p>
+            Semantic list variant used specifically for toolbar commands or
+            buttons.
+          </p>
+          <li><button type="button">&lt;button&gt;</button></li>
+          <li><button type="button">&lt;button&gt;</button></li>
+          <li><button type="button">&lt;button&gt;</button></li>
+        </menu>
       </main>
-      <section>
-        <h1>&lt;section&gt;</h1>
-        <p>
-          A thematic grouping of content, typically accompanied by a heading.
-        </p>
-      </section>
+
       <article>
         <h1>&lt;article&gt;</h1>
         <p>
@@ -179,8 +184,58 @@
             alt="some picture"
           />
           <figcaption>Example picture.</figcaption>
+          <h2>&lt;audio&gt;</h2>
+          <p>Native audio media player with optional subtitle tracks.</p>
+          <audio controls preload="metadata">
+            <source src="asssets/audio/audioLorem20.aac" type="audio/aac" />
+            <source src="asssets/audio/audioLorem20.mp3" type="audio/mpeg" />
+            Your browser does not support audio element
+          </audio>
+          <h2>&lt;video&gt;</h2>
+          <p>Native video media player with optional subtitle tracks.</p>
+          <video
+            controls
+            width="800"
+            height="450"
+            poster="null"
+            preload="metadata"
+          >
+            <source src="asssets/video/videoLorem20.webm" type="video/webm" />
+            <source src="asssets/video/videoLorem20.mp4" type="video/mp4" />
+            Your browser does not support video element
+          </video>
+          <h2>&lt;svg&gt;</h2>
+          <p>Inline Scalable Vector Graphics markup container.</p>
+          <svg width="100" height="100" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="40" fill="#2563eb" />
+            <path
+              d="M30 50 L45 65 L70 35"
+              stroke="#ffffff"
+              stroke-width="6"
+              fill="none"
+            />
+          </svg>
         </figure>
+        <pre>
+          <h2>&lt;pre&gt;</h2>
+          Preformatted text block preserving whitespace and monospace formatting.
+  +------------------+
+  |  System Status   |
+  |  [OK] Online     |
+  +------------------+
+        </pre>
       </article>
+      <section>
+        <h1>&lt;section&gt;</h1>
+        <p>
+          A thematic grouping of content, typically accompanied by a heading.
+        </p>
+        <h1>&lt;canvas&gt;</h1>
+        <p>Bitmapped canvas drawing surface manipulated via JavaScript API.</p>
+        <canvas id="myCanvas" width="400" height="200">
+          Your browser does not support the canvas element.
+        </canvas>
+      </section>
       <aside>
         <h1>&lt;aside&gt;</h1>
         <p>
@@ -188,6 +243,21 @@
           links).
         </p>
       </aside>
+      <h1>&lt;iframe&gt;</h1>
+      <p>Embeds an isolated nested browsing context (external web page).</p>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d148215.07734402627!2d-121.97175993251953!3d37.35173098118943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb68ad0cfc739%3A0x7eb356b66bd4b50e!2sSilicon%20Valley%2C%20CA%2C%20USA!5e0!3m2!1sen!2skz!4v1789477490029!5m2!1sen!2skz"
+          title="Google Maps Location"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
+      </div>
       <footer>
         <h1>&lt;footer&gt;</h1>
         <p>Page or section metadata, copyright notices, or secondary links.</p>
