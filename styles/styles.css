@@ -9,7 +9,7 @@
 :root {
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
-  --space-md: 1rem;
+  --space-md: 1rem; /*16px*/
   --space-lg: 1.5rem;
   --space-xl: 2rem;
 }

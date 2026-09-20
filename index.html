@@ -9,311 +9,420 @@
   </head>
   <body>
     <div>
-      <header>
-        <h1>&lt;header&gt;</h1>
-        <p>Introductory content, site branding, or page/section navigation.</p>
-        <search>
-          <h2>&lt;search&gt;</h2>
-          <p>search landmark for all related controls and elements</p>
-          <form>
-            <label>&lt;label&gt;</label>
-            <input placeholder="placeholder" />
-            <button type="submit">search &lt;button&gt;</button>
-          </form>
-        </search>
-      </header>
-      <nav>
-        <h1>&lt;nav&gt;</h1>
-        <p>Primary navigation links.</p>
-        <ul>
-          <li><a href="#">HTML</a></li>
-          <li><a href="#">HTML + CSS</a></li>
-          <li><a href="#">HTML + CSS + JS</a></li>
-        </ul>
-      </nav>
-      <main>
-        <h1>&lt;main&gt;</h1>
-        <p>
-          The dominant, non-repeating content unique to the page(only one per
-          document).
-        </p>
-        <div>
-          <h2>&lt;span&gt;</h2>
-          <p>
-            Generic inline element used for targeted styling or scripting.
-            <strong>
-              <span class="span-styled"
-                >This text is inside span: styled off.</span
-              >
-            </strong>
-          </p>
-        </div>
-        <dl>
-          <dt><h2>&lt;dl&gt;</h2></dt>
-          <dd>
-            Description list container, term/key, and term value/description.
-          </dd>
-        </dl>
-        <details open>
-          <summary>
-            <strong>&lt;details&gt;</strong>
-          </summary>
-          <p>interactive collapsible container</p>
+      <div class="header">
+        <header>
+          <hgroup class="hgroup">
+            <h1 class="tag1">&lt;header&gt;</h1>
+            <p>
+              Introductory content, site branding, or page/section navigation.
+            </p>
+          </hgroup>
 
-          <form action="/submit-feedback" method="POST">
-            <fieldset>
-              <legend>&lt;fieldset&gt;</legend>
+          <div class="hexamples">
+            <h1>&lt;h1&gt;</h1>
+            <h2>&lt;h2&gt;</h2>
+            <h3>&lt;h3&gt;</h3>
+            <h4>&lt;h4&gt;</h4>
+            <h5>&lt;h5&gt;</h5>
+            <h6>&lt;h6&gt;</h6>
+            <p>h1-h6 examples</p>
+          </div>
 
-              <div>
-                <label for="username">&lt;input&gt;</label>
-                <input
-                  type="text"
-                  id="username"
-                  name="username"
-                  placeholder="placeholder"
-                  required
-                />
-              </div>
+          <div class="hr">
+            <h2>&lt;hr&gt;</h2>
+            <p>Thematic break or transition between paragraph-level topics.</p>
+            <hr />
+          </div>
 
-              <div>
-                <label for="framework">&lt;datalist&gt;</label>
-                <input
-                  type="text"
-                  id="framework"
-                  name="framework"
-                  list="framework-options"
-                  placeholder="placeholder"
-                />
-                <datalist id="framework-options">
-                  <option value="<option>"></option>
-                  <option value="<optioin>"></option>
-                  <option value="<option>"></option>
-                  <option value="<option>"></option>
-                </datalist>
-              </div>
-
-              <div>
-                <label for="experience">&lt;select&gt;</label>
-                <select id="experience" name="experience">
-                  <option value="junior">&lt;option&gt;</option>
-                  <option value="mid">&lt;option&gt;</option>
-                  <option value="senior">&lt;option&gt;</option>
-                </select>
-              </div>
-              <div>
-                <label for="profile-completion">&lt;meter&gt;</label>
-                <meter
-                  id="profile-completion"
-                  min="0"
-                  max="100"
-                  value="75"
-                  low="33"
-                  high="66"
-                  optimum="100"
-                >
-                  75%
-                </meter>
-              </div>
-
-              <div>
-                <label for="upload-progress">&lt;progress&gt;</label>
-                <progress id="upload-progress" value="60" max="100">
-                  60%
-                </progress>
-              </div>
-
-              <div>
-                <label for="comments">&lt;textarea&gt;</label><br />
-                <textarea
-                  id="comments"
-                  name="comments"
-                  rows="4"
-                  cols="40"
-                  placeholder="placeholder"
-                ></textarea>
-              </div>
-            </fieldset>
-            <br />
-            <button type="submit">submit &lt;button&gt;</button>
-            <button
-              type="button"
-              onclick="document.getElementById('confirm-modal').showModal()"
-            >
-              modal &lt;button&gt;
-            </button>
-          </form>
-        </details>
-        <dialog id="confirm-modal">
-          <h3>&lt;dialog&gt;</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim,
-            laudantium?
-          </p>
-          <form method="dialog">
-            <button type="button">Close &lt;button&gt;</button>
-          </form>
-        </dialog>
-        <menu class="toolbar">
-          <h2>&lt;menu&gt;</h2>
-          <p>
-            Semantic list variant used specifically for toolbar commands or
-            buttons.
-          </p>
-          <li><button type="button">&lt;button&gt;</button></li>
-          <li><button type="button">&lt;button&gt;</button></li>
-          <li><button type="button">&lt;button&gt;</button></li>
-        </menu>
-      </main>
-
-      <article>
-        <h1>&lt;article&gt;</h1>
-        <p>
-          Self-contained, independently distributable content(e.g., blog post,
-          comment, product card).
-        </p>
-        <figure>
-          <h2>&lt;figure/figcaption&gt;</h2>
-          <p>
-            Self-contained media graphic/code block paired with a descriptive
-            caption.
-          </p>
-          <img
-            src="/asssets/images/snippet.jpg"
-            width="100"
-            height="100"
-            alt="some picture"
-          />
-          <figcaption>Example picture.</figcaption>
-          <h2>&lt;audio&gt;</h2>
-          <p>Native audio media player with optional subtitle tracks.</p>
-          <audio controls preload="metadata">
-            <source src="asssets/audio/audioLorem20.aac" type="audio/aac" />
-            <source src="asssets/audio/audioLorem20.mp3" type="audio/mpeg" />
-            Your browser does not support audio element
-          </audio>
-          <h2>&lt;video&gt;</h2>
-          <p>Native video media player with optional subtitle tracks.</p>
-          <video
-            controls
-            width="800"
-            height="450"
-            poster="null"
-            preload="metadata"
-          >
-            <source src="asssets/video/videoLorem20.webm" type="video/webm" />
-            <source src="asssets/video/videoLorem20.mp4" type="video/mp4" />
-            Your browser does not support video element
-          </video>
-          <h2>&lt;svg&gt;</h2>
-          <p>Inline Scalable Vector Graphics markup container.</p>
-          <svg width="100" height="100" viewBox="0 0 100 100">
-            <circle cx="50" cy="50" r="40" fill="#2563eb" />
-            <path
-              d="M30 50 L45 65 L70 35"
-              stroke="#ffffff"
-              stroke-width="6"
-              fill="none"
-            />
-          </svg>
-        </figure>
-        <pre>
-          <h2>&lt;pre&gt;</h2>
-          Preformatted text block preserving whitespace and monospace formatting.
-  +------------------+
-  |  System Status   |
-  |  [OK] Online     |
-  +------------------+
-        </pre>
-      </article>
-      <section>
-        <h1>&lt;section&gt;</h1>
-        <p>
-          A thematic grouping of content, typically accompanied by a heading.
-        </p>
-        <h2>&lt;canvas&gt;</h2>
-        <p>Bitmapped canvas drawing surface manipulated via JavaScript API.</p>
-        <canvas id="myCanvas" width="400" height="200">
-          Your browser does not support the canvas element.
-        </canvas>
-        <h2>&lt;table&gt;</h2>
-        <table>
-          <caption>
-            Represents multi-dimensional tabular data structured in rows and
-            columns.
-          </caption>
-          <thead>
-            <tr>
-              <th>header1</th>
-              <th>header2</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>data1</td>
-              <td>data2</td>
-            </tr>
-            <tr>
-              <td>data3</td>
-              <td>data4</td>
-            </tr>
-          </tbody>
-        </table>
-        <h2>&lt;template&gt;</h2>
-        <p>
-          Unrendered HTML markup fragment stored for runtime JavaScript
-          instantiation.
-        </p>
-        <h2>&lt;slot&gt;</h2>
-        <p>Content placeholder slot inside Web Component Shadow DOM trees.</p>
-
-        <!-- TEMPLATE AND SLOT DESCRIPTION MOVED OUTSIDE FOR LIVE PAGE TO SHOW THEM WITHOUT JS INVOLVED-->
-
-        <template>
-          <p>
-            This text will be visible only after related JS script will be
-            activated.
-          </p>
-          <slot> </slot>
-        </template>
-      </section>
-      <aside>
-        <h1>&lt;aside&gt;</h1>
-        <p>
-          Indirectly related content(e.g., sidebars, calloutboxes, related
-          links).
-        </p>
-      </aside>
-      <h1>&lt;iframe&gt;</h1>
-      <p>Embeds an isolated nested browsing context (external web page).</p>
-      <div class="map-container">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d148215.07734402627!2d-121.97175993251953!3d37.35173098118943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb68ad0cfc739%3A0x7eb356b66bd4b50e!2sSilicon%20Valley%2C%20CA%2C%20USA!5e0!3m2!1sen!2skz!4v1789477490029!5m2!1sen!2skz"
-          title="Google Maps Location"
-          width="600"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        >
-        </iframe>
+          <div class="search">
+            <search>
+              <h2 class="tag2">&lt;search&gt;</h2>
+              <p>search landmark for all related controls and elements</p>
+              <form>
+                <label>&lt;label&gt;</label>
+                <input placeholder="placeholder" />
+                <button type="submit">search &lt;button&gt;</button>
+              </form>
+            </search>
+          </div>
+        </header>
       </div>
-      <footer>
-        <h1>&lt;footer&gt;</h1>
-        <p>Page or section metadata, copyright notices, or secondary links.</p>
-        <address>
-          <h1>&lt;address&gt;</h1>
-          <p>For contact info, automatically changes text to italics</p>
-        </address>
-        <h2>&lt;noscript&gt;</h2>
-        <p>
-          Fallback markup rendered if JavaScript is disabled in the client
-          browser.
-        </p>
-        <noscript>
-          <p>Warning: This text will be visible only if JavaScript disabled</p>
-        </noscript>
-      </footer>
+
+      <div class="nav">
+        <nav>
+          <h1 class="tag1">&lt;nav&gt;</h1>
+          <p>Primary navigation links.</p>
+          <ul>
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">HTML + CSS</a></li>
+            <li><a href="#">HTML + CSS + JS</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="main">
+        <main>
+          <h1 class="tag1">&lt;main&gt;</h1>
+          <p>
+            The dominant, non-repeating content unique to the page(only one per
+            document).
+          </p>
+
+          <div>
+            <h2 class="tag2">&lt;span&gt;</h2>
+            <p>
+              Generic inline element used for targeted styling or scripting.
+              <strong>
+                <span class="span-styled"
+                  >This text is inside span: styled off.</span
+                >
+              </strong>
+            </p>
+          </div>
+
+          <dl>
+            <dt><h2 class="tag2">&lt;dl&gt;</h2></dt>
+            <dd>
+              Description list container, term/key, and term value/description.
+            </dd>
+          </dl>
+
+          <div class="details">
+            <details open>
+              <summary>
+                <strong>&lt;details&gt;</strong>
+              </summary>
+              <p>interactive collapsible container</p>
+
+              <div class="form">
+                <form action="/submit-feedback" method="POST">
+                  <div class="fieldset">
+                    <fieldset>
+                      <legend>&lt;fieldset&gt;</legend>
+                      <div>
+                        <label for="username">&lt;input&gt;</label>
+                        <input
+                          type="text"
+                          id="username"
+                          name="username"
+                          placeholder="placeholder"
+                          required
+                        />
+                      </div>
+
+                      <div class="datalist">
+                        <label for="framework">&lt;datalist&gt;</label>
+                        <input
+                          type="text"
+                          id="framework"
+                          name="framework"
+                          list="framework-options"
+                          placeholder="placeholder"
+                        />
+                        <datalist id="framework-options">
+                          <option value="<option>"></option>
+                          <option value="<optioin>"></option>
+                          <option value="<option>"></option>
+                          <option value="<option>"></option>
+                        </datalist>
+                      </div>
+
+                      <div class="select">
+                        <label for="experience">&lt;select&gt;</label>
+                        <select id="experience" name="experience">
+                          <option value="junior">&lt;option&gt;</option>
+                          <option value="mid">&lt;option&gt;</option>
+                          <option value="senior">&lt;option&gt;</option>
+                        </select>
+                      </div>
+
+                      <div class="meter">
+                        <label for="profile-completion">&lt;meter&gt;</label>
+                        <meter
+                          id="profile-completion"
+                          min="0"
+                          max="100"
+                          value="75"
+                          low="33"
+                          high="66"
+                          optimum="100"
+                        >
+                          75%
+                        </meter>
+                      </div>
+
+                      <div class="progress">
+                        <label for="upload-progress">&lt;progress&gt;</label>
+                        <progress id="upload-progress" value="60" max="100">
+                          60%
+                        </progress>
+                      </div>
+
+                      <div class="textarea">
+                        <label for="comments">&lt;textarea&gt;</label><br />
+                        <textarea
+                          id="comments"
+                          name="comments"
+                          rows="4"
+                          cols="40"
+                          placeholder="placeholder"
+                        ></textarea>
+                      </div>
+                    </fieldset>
+                  </div>
+
+                  <br />
+                  <button type="submit">submit &lt;button&gt;</button>
+                  <button
+                    type="button"
+                    onclick="
+                      document.getElementById('confirm-modal').showModal()
+                    "
+                  >
+                    modal &lt;button&gt;
+                  </button>
+                </form>
+              </div>
+            </details>
+          </div>
+
+          <div class="dialog">
+            <dialog id="confirm-modal">
+              <h3>&lt;dialog&gt;</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim,
+                laudantium?
+              </p>
+              <form method="dialog">
+                <button type="button">Close &lt;button&gt;</button>
+              </form>
+            </dialog>
+          </div>
+
+          <div class="menu">
+            <menu class="toolbar">
+              <h2 class="tag2">&lt;menu&gt;</h2>
+              <p>
+                Semantic list variant used specifically for toolbar commands or
+                buttons.
+              </p>
+              <li><button type="button">&lt;button&gt;</button></li>
+              <li><button type="button">&lt;button&gt;</button></li>
+              <li><button type="button">&lt;button&gt;</button></li>
+            </menu>
+          </div>
+        </main>
+      </div>
+
+      <div class="article">
+        <article>
+          <h1 class="tag1">&lt;article&gt;</h1>
+          <p>
+            Self-contained, independently distributable content(e.g., blog post,
+            comment, product card).
+          </p>
+
+          <div class="figure">
+            <figure>
+              <h2 class="tag2">&lt;figure/figcaption&gt;</h2>
+              <p>
+                Self-contained media graphic/code block paired with a
+                descriptive caption.
+              </p>
+              <img
+                src="/asssets/images/snippet.jpg"
+                width="100"
+                height="100"
+                alt="some picture"
+              />
+              <figcaption>Example picture.</figcaption>
+
+              <div class="audio">
+                <h2 class="tag2">&lt;audio&gt;</h2>
+                <p>Native audio media player with optional subtitle tracks.</p>
+                <audio controls preload="metadata">
+                  <source
+                    src="asssets/audio/audioLorem20.aac"
+                    type="audio/aac"
+                  />
+                  <source
+                    src="asssets/audio/audioLorem20.mp3"
+                    type="audio/mpeg"
+                  />
+                  Your browser does not support audio element
+                </audio>
+              </div>
+
+              <div class="video">
+                <h2 class="tag2">&lt;video&gt;</h2>
+                <p>Native video media player with optional subtitle tracks.</p>
+                <video
+                  controls
+                  width="800"
+                  height="450"
+                  poster="null"
+                  preload="metadata"
+                >
+                  <source
+                    src="asssets/video/videoLorem20.webm"
+                    type="video/webm"
+                  />
+                  <source
+                    src="asssets/video/videoLorem20.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support video element
+                </video>
+              </div>
+
+              <div class="svg">
+                <h2 class="tag2">&lt;svg&gt;</h2>
+                <p>Inline Scalable Vector Graphics markup container.</p>
+                <svg width="100" height="100" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="40" fill="#2563eb" />
+                  <path
+                    d="M30 50 L45 65 L70 35"
+                    stroke="#ffffff"
+                    stroke-width="6"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+            </figure>
+          </div>
+
+          <div class="pre">
+            <pre>
+              <h2 class="tag2">&lt;pre&gt;</h2>
+              Preformatted text block preserving whitespace and monospace formatting.
+              +------------------+
+              |  System Status   |
+              |  [OK] Online     |
+              +------------------+
+            </pre>
+          </div>
+        </article>
+      </div>
+      <div class="section">
+        <section>
+          <h1 class="tag1">&lt;section&gt;</h1>
+          <p>
+            A thematic grouping of content, typically accompanied by a heading.
+          </p>
+          <div class="canvas">
+            <h2 class="tag2">&lt;canvas&gt;</h2>
+            <p>
+              Bitmapped canvas drawing surface manipulated via JavaScript API.
+            </p>
+            <canvas id="myCanvas" width="400" height="200">
+              Your browser does not support the canvas element.
+            </canvas>
+          </div>
+
+          <div class="table">
+            <h2 class="tag2">&lt;table&gt;</h2>
+            <table>
+              <caption>
+                Represents multi-dimensional tabular data structured in rows and
+                columns.
+              </caption>
+              <thead>
+                <tr>
+                  <th>header1</th>
+                  <th>header2</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>data1</td>
+                  <td>data2</td>
+                </tr>
+                <tr>
+                  <td>data3</td>
+                  <td>data4</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="template">
+            <h2 class="tag2">&lt;template&gt;</h2>
+            <p>
+              Unrendered HTML markup fragment stored for runtime JavaScript
+              instantiation.
+            </p>
+            <h2 class="tag2">&lt;slot&gt;</h2>
+            <p>
+              Content placeholder slot inside Web Component Shadow DOM trees.
+            </p>
+            <!-- TEMPLATE AND SLOT DESCRIPTION MOVED OUTSIDE FOR LIVE PAGE TO SHOW THEM WITHOUT JS INVOLVED-->
+            <template>
+              <p>
+                This text will be visible only after related JS script will be
+                activated.
+              </p>
+              <slot> </slot>
+            </template>
+          </div>
+        </section>
+      </div>
+
+      <div class="aside">
+        <aside>
+          <h1 class="tag1">&lt;aside&gt;</h1>
+          <p>
+            Indirectly related content(e.g., sidebars, calloutboxes, related
+            links).
+          </p>
+        </aside>
+      </div>
+
+      <div class="iframe">
+        <h1 class="tag1">&lt;iframe&gt;</h1>
+        <p>Embeds an isolated nested browsing context (external web page).</p>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d148215.07734402627!2d-121.97175993251953!3d37.35173098118943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb68ad0cfc739%3A0x7eb356b66bd4b50e!2sSilicon%20Valley%2C%20CA%2C%20USA!5e0!3m2!1sen!2skz!4v1789477490029!5m2!1sen!2skz"
+            title="Google Maps Location"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+      </div>
+
+      <div class="footer">
+        <footer>
+          <h1 class="tag1">&lt;footer&gt;</h1>
+          <p>
+            Page or section metadata, copyright notices, or secondary links.
+          </p>
+
+          <div class="address">
+            <address>
+              <h1 class="tag1">&lt;address&gt;</h1>
+              <p>For contact info, automatically changes text to italics</p>
+            </address>
+          </div>
+
+          <div class="noscript">
+            <h2 class="tag2">&lt;noscript&gt;</h2>
+            <p>
+              Fallback markup rendered if JavaScript is disabled in the client
+              browser.
+            </p>
+            <noscript>
+              <p>
+                Warning: This text will be visible only if JavaScript disabled
+              </p>
+            </noscript>
+          </div>
+        </footer>
+      </div>
     </div>
   </body>
 </html>
