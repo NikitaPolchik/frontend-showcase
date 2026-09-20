@@ -41,11 +41,11 @@
           <h2>&lt;span&gt;</h2>
           <p>
             Generic inline element used for targeted styling or scripting.
-            <strong
-              ><span class="span-styled"
+            <strong>
+              <span class="span-styled"
                 >This text is inside span: styled off.</span
-              ></strong
-            >
+              >
+            </strong>
           </p>
         </div>
         <dl>
@@ -75,7 +75,7 @@
                 />
               </div>
 
-              <divf>
+              <div>
                 <label for="framework">&lt;datalist&gt;</label>
                 <input
                   type="text"
@@ -90,7 +90,7 @@
                   <option value="<option>"></option>
                   <option value="<option>"></option>
                 </datalist>
-              </divf>
+              </div>
 
               <div>
                 <label for="experience">&lt;select&gt;</label>
@@ -263,11 +263,17 @@
           Unrendered HTML markup fragment stored for runtime JavaScript
           instantiation.
         </p>
+        <h2>&lt;slot&gt;</h2>
+        <p>Content placeholder slot inside Web Component Shadow DOM trees.</p>
+
+        <!-- TEMPLATE AND SLOT DESCRIPTION MOVED OUTSIDE FOR LIVE PAGE TO SHOW THEM WITHOUT JS INVOLVED-->
+
         <template>
           <p>
             This text will be visible only after related JS script will be
             activated.
           </p>
+          <slot> </slot>
         </template>
       </section>
       <aside>
@@ -299,6 +305,14 @@
           <h1>&lt;address&gt;</h1>
           <p>For contact info, automatically changes text to italics</p>
         </address>
+        <h2>&lt;noscript&gt;</h2>
+        <p>
+          Fallback markup rendered if JavaScript is disabled in the client
+          browser.
+        </p>
+        <noscript>
+          <p>Warning: This text will be visible only if JavaScript disabled</p>
+        </noscript>
       </footer>
     </div>
   </body>
