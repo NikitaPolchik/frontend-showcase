@@ -8,7 +8,7 @@
     <title>Frontend showcase</title>
   </head>
   <body>
-    <div>
+    <div class="container">
       <div class="header">
         <header>
           <hgroup class="hgroup">
@@ -64,8 +64,8 @@
         <main>
           <h1 class="tag1">&lt;main&gt;</h1>
           <p>
-            The dominant, non-repeating content unique to the page(only one per
-            document).
+            The <em>dominant</em>, non-repeating content unique to the
+            page<small> (only one per document). </small>
           </p>
 
           <div>
@@ -83,7 +83,9 @@
           <dl>
             <dt><h2 class="tag2">&lt;dl&gt;</h2></dt>
             <dd>
-              Description list container, term/key, and term value/description.
+              Description list container, <sup>term</sup>/<sub>key</sub>, and
+              <sup>term</sup>/<sub>value</sub>
+              description.
             </dd>
           </dl>
 
@@ -218,8 +220,8 @@
         <article>
           <h1 class="tag1">&lt;article&gt;</h1>
           <p>
-            Self-contained, independently distributable content(e.g., blog post,
-            comment, product card).
+            Self-contained, independently distributable content<br />(e.g., blog
+            post, comment, product card).
           </p>
 
           <div class="figure">
@@ -236,6 +238,17 @@
                 alt="some picture"
               />
               <figcaption>Example picture.</figcaption>
+              <div class="blockquote">
+                <blockquote
+                  cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"
+                >
+                  <h2 class="tag2">&lt;blockquote&gt;</h2>
+                  <p>
+                    The HTML <cite>&lt;blockquote&gt; </cite>Element indicates
+                    that the enclosed text is an extended quotation.
+                  </p>
+                </blockquote>
+              </div>
 
               <div class="audio">
                 <h2 class="tag2">&lt;audio&gt;</h2>
@@ -299,6 +312,16 @@
               |  System Status   |
               |  [OK] Online     |
               +------------------+
+
+              <div class="code">
+                <h2>&lt;code&gt;</h2>
+                <p>Inline computer code fragment or variable name.</p>
+                <code>
+                  function placeholder(){
+                    console.log("do something")
+                  }
+                </code>
+              </div>
             </pre>
           </div>
         </article>
@@ -371,8 +394,8 @@
         <aside>
           <h1 class="tag1">&lt;aside&gt;</h1>
           <p>
-            Indirectly related content(e.g., sidebars, calloutboxes, related
-            links).
+            Indirectly related content<wbr />(e.g., sidebars, calloutboxes,
+            related links).
           </p>
         </aside>
       </div>
@@ -412,10 +435,15 @@
           <div class="noscript">
             <h2 class="tag2">&lt;noscript&gt;</h2>
             <p>
-              Fallback markup rendered if JavaScript is disabled in the client
-              browser.
+              Fallback markup rendered if
+              <mark> <abbr title="JavaScript">JS</abbr> is disabled </mark>
+              in the client browser.
             </p>
             <noscript>
+              <p>
+                This line placed on
+                <time datetime="2026-09-21">September 21, 2026</time>.
+              </p>
               <p>
                 Warning: This text will be visible only if JavaScript disabled
               </p>
