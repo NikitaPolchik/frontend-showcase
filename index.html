@@ -8,44 +8,28 @@
     <title>Frontend showcase</title>
   </head>
   <body>
-    <div class="container">
-      <div class="header">
-        <header>
-          <hgroup class="hgroup">
+    <div class="container-main">
+      <div class="header-container">
+        <div class="header">
+          <header>
             <h1 class="tag1">&lt;header&gt;</h1>
             <p>
               Introductory content, site branding, or page/section navigation.
             </p>
-          </hgroup>
+          </header>
+        </div>
 
-          <div class="hexamples">
-            <h1>&lt;h1&gt;</h1>
-            <h2>&lt;h2&gt;</h2>
-            <h3>&lt;h3&gt;</h3>
-            <h4>&lt;h4&gt;</h4>
-            <h5>&lt;h5&gt;</h5>
-            <h6>&lt;h6&gt;</h6>
-            <p>h1-h6 examples</p>
-          </div>
-
-          <div class="hr">
-            <h2>&lt;hr&gt;</h2>
-            <p>Thematic break or transition between paragraph-level topics.</p>
-            <hr />
-          </div>
-
-          <div class="search">
-            <search>
-              <h2 class="tag2">&lt;search&gt;</h2>
-              <p>search landmark for all related controls and elements</p>
-              <form>
-                <label>&lt;label&gt;</label>
-                <input placeholder="placeholder" />
-                <button type="submit">search &lt;button&gt;</button>
-              </form>
-            </search>
-          </div>
-        </header>
+        <div class="search">
+          <search>
+            <h2 class="tag2">&lt;search&gt;</h2>
+            <p>search landmark for all related controls and elements</p>
+            <form>
+              <label>&lt;label&gt;</label>
+              <input placeholder="placeholder" />
+              <button type="submit">search &lt;button&gt;</button>
+            </form>
+          </search>
+        </div>
       </div>
 
       <div class="nav">
@@ -53,11 +37,17 @@
           <h1 class="tag1">&lt;nav&gt;</h1>
           <p>Primary navigation links.</p>
           <ul>
-            <li><a href="#">HTML</a></li>
-            <li><a href="#">HTML + CSS</a></li>
-            <li><a href="#">HTML + CSS + JS</a></li>
+            <li><a href="#">Placeholder page 1</a></li>
+            <li><a href="#">Placeholder page 2</a></li>
+            <li><a href="#">Placeholder page 3</a></li>
           </ul>
         </nav>
+      </div>
+
+      <div class="hr">
+        <h2>&lt;hr&gt;</h2>
+        <p>Thematic break or transition between paragraph-level topics.</p>
+        <hr />
       </div>
 
       <div class="main">
@@ -96,8 +86,8 @@
               </summary>
               <p>interactive collapsible container</p>
 
-              <div class="form">
-                <form action="/submit-feedback" method="POST">
+              <div class="form-container">
+                <form id="form-main">
                   <div class="fieldset">
                     <fieldset>
                       <legend>&lt;fieldset&gt;</legend>
@@ -105,11 +95,11 @@
                         <label for="username">&lt;input&gt;</label>
                         <input
                           type="text"
-                          id="username"
-                          name="username"
+                          id="input-main"
                           placeholder="placeholder"
                           required
                         />
+                        <button type="submit">submit &lt;button&gt;</button>
                       </div>
 
                       <div class="datalist">
@@ -174,7 +164,6 @@
                   </div>
 
                   <br />
-                  <button type="submit">submit &lt;button&gt;</button>
                   <button
                     type="button"
                     onclick="
@@ -196,13 +185,18 @@
                 laudantium?
               </p>
               <form method="dialog">
-                <button type="button">Close &lt;button&gt;</button>
+                <button
+                  type="button"
+                  onclick="document.getElementById('confirm-modal').close()"
+                >
+                  Close &lt;button&gt;
+                </button>
               </form>
             </dialog>
           </div>
 
           <div class="menu">
-            <menu class="toolbar">
+            <menu>
               <h2 class="tag2">&lt;menu&gt;</h2>
               <p>
                 Semantic list variant used specifically for toolbar commands or
@@ -224,19 +218,16 @@
             post, comment, product card).
           </p>
 
-          <div class="figure">
+          <div class="figure-container">
             <figure>
               <h2 class="tag2">&lt;figure/figcaption&gt;</h2>
               <p>
                 Self-contained media graphic/code block paired with a
                 descriptive caption.
               </p>
-              <img
-                src="/asssets/images/snippet.jpg"
-                width="100"
-                height="100"
-                alt="some picture"
-              />
+
+              <img src="/asssets/images/snippet.jpg" alt="some picture" />
+
               <figcaption>Example picture.</figcaption>
               <div class="blockquote">
                 <blockquote
@@ -250,7 +241,7 @@
                 </blockquote>
               </div>
 
-              <div class="audio">
+              <div class="audio-container">
                 <h2 class="tag2">&lt;audio&gt;</h2>
                 <p>Native audio media player with optional subtitle tracks.</p>
                 <audio controls preload="metadata">
@@ -266,16 +257,10 @@
                 </audio>
               </div>
 
-              <div class="video">
+              <div class="video-container">
                 <h2 class="tag2">&lt;video&gt;</h2>
                 <p>Native video media player with optional subtitle tracks.</p>
-                <video
-                  controls
-                  width="800"
-                  height="450"
-                  poster="null"
-                  preload="metadata"
-                >
+                <video controls poster="null" preload="metadata">
                   <source
                     src="asssets/video/videoLorem20.webm"
                     type="video/webm"
@@ -288,11 +273,11 @@
                 </video>
               </div>
 
-              <div class="svg">
+              <div class="svg-container">
                 <h2 class="tag2">&lt;svg&gt;</h2>
                 <p>Inline Scalable Vector Graphics markup container.</p>
-                <svg width="100" height="100" viewBox="0 0 100 100">
-                  <circle cx="50" cy="50" r="40" fill="#2563eb" />
+                <svg viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="40" />
                   <path
                     d="M30 50 L45 65 L70 35"
                     stroke="#ffffff"
@@ -304,25 +289,15 @@
             </figure>
           </div>
 
-          <div class="pre">
-            <pre>
-              <h2 class="tag2">&lt;pre&gt;</h2>
-              Preformatted text block preserving whitespace and monospace formatting.
-              +------------------+
-              |  System Status   |
-              |  [OK] Online     |
-              +------------------+
+          <div class="pre-code-container">
+            <h2 class="tag2">&lt;pre&gt;&lt;code&gt;</h2>
+            <pre><code>
+  Preformatted text block preserving whitespace and monospace formatting + code fragment or variable name.
 
-              <div class="code">
-                <h2>&lt;code&gt;</h2>
-                <p>Inline computer code fragment or variable name.</p>
-                <code>
-                  function placeholder(){
-                    console.log("do something")
-                  }
-                </code>
-              </div>
-            </pre>
+  function placeHolder(){
+    console.log("do something or else")
+  }            
+            </code></pre>
           </div>
         </article>
       </div>
@@ -332,17 +307,15 @@
           <p>
             A thematic grouping of content, typically accompanied by a heading.
           </p>
-          <div class="canvas">
+          <div class="canvas-container">
             <h2 class="tag2">&lt;canvas&gt;</h2>
             <p>
               Bitmapped canvas drawing surface manipulated via JavaScript API.
             </p>
-            <canvas id="myCanvas" width="400" height="200">
-              Your browser does not support the canvas element.
-            </canvas>
+            <canvas> Your browser does not support the canvas element. </canvas>
           </div>
 
-          <div class="table">
+          <div class="table-container">
             <h2 class="tag2">&lt;table&gt;</h2>
             <table>
               <caption>
@@ -351,18 +324,25 @@
               </caption>
               <thead>
                 <tr>
-                  <th>header1</th>
-                  <th>header2</th>
+                  <th>table1</th>
+                  <th>table2</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>data1</td>
                   <td>data2</td>
+                  <td>data3</td>
                 </tr>
                 <tr>
-                  <td>data3</td>
                   <td>data4</td>
+                  <td>data5</td>
+                  <td>data6</td>
+                </tr>
+                <tr>
+                  <td>data7</td>
+                  <td>data8</td>
+                  <td>data9</td>
                 </tr>
               </tbody>
             </table>
@@ -378,7 +358,7 @@
             <p>
               Content placeholder slot inside Web Component Shadow DOM trees.
             </p>
-            <!-- TEMPLATE AND SLOT DESCRIPTION MOVED OUTSIDE FOR LIVE PAGE TO SHOW THEM WITHOUT JS INVOLVED-->
+            <!-- TEMPLATE AND SLOT DESCRIPTION MOVED OUTSIDE of the template body FOR LIVE PAGE to render them without JS-->
             <template>
               <p>
                 This text will be visible only after related JS script will be
@@ -400,15 +380,13 @@
         </aside>
       </div>
 
-      <div class="iframe">
+      <div class="iframe-container">
         <h1 class="tag1">&lt;iframe&gt;</h1>
         <p>Embeds an isolated nested browsing context (external web page).</p>
         <div class="map-container">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d148215.07734402627!2d-121.97175993251953!3d37.35173098118943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb68ad0cfc739%3A0x7eb356b66bd4b50e!2sSilicon%20Valley%2C%20CA%2C%20USA!5e0!3m2!1sen!2skz!4v1789477490029!5m2!1sen!2skz"
             title="Google Maps Location"
-            width="600"
-            height="450"
             style="border: 0"
             allowfullscreen=""
             loading="lazy"
@@ -450,6 +428,25 @@
             </noscript>
           </div>
         </footer>
+      </div>
+
+      <div class="h1-h6 examples">
+        <h1>&lt;h1&gt;</h1>
+        <h2>&lt;h2&gt;</h2>
+        <h3>&lt;h3&gt;</h3>
+        <h4>&lt;h4&gt;</h4>
+        <h5>&lt;h5&gt;</h5>
+        <h6>&lt;h6&gt;</h6>
+        <p>h1-h6 examples</p>
+      </div>
+
+      <div class="hgroup">
+        <hgroup>
+          <h2 class="tag2">&lt;hgroup&gt;</h2>
+          <p>
+            Groups multi-level headings together with subheadings or titles.
+          </p>
+        </hgroup>
       </div>
     </div>
   </body>
