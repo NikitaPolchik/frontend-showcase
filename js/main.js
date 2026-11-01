@@ -1,4 +1,4 @@
-const form = document.getElementById("form-main");
+const form = document.getElementById("form-id");
 const input = document.getElementById("input-main");
 
 form.addEventListener("submit", (event) => {
