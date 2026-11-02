@@ -6,11 +6,12 @@
     <link rel="stylesheet" href="styles/variables.css" />
     <link rel="stylesheet" href="styles/base.css" />
     <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="stylesheet" href="styles/components.css" />
     <script src="js/main.js" defer></script>
     <title>Frontend showcase</title>
   </head>
   <body>
-    <div class="body-container">
+    <div class="body-container" id="home-id">
       <div class="header-container">
         <div class="header">
           <header>
@@ -54,7 +55,7 @@
             page<small> (only one per document). </small>
           </p>
 
-          <div class="interactables-container">
+          <div class="interactables-container" id="interactables-id">
             <h1 class="interactables-header">Interactables</h1>
             <hr />
             <div class="details-container">
@@ -70,20 +71,22 @@
                       <fieldset>
                         <legend>&lt;fieldset&gt;</legend>
                         <div>
-                          <label for="username">&lt;input&gt;</label>
+                          <label for="input-id">&lt;input&gt;</label>
                           <input
                             type="text"
-                            id="input-main"
+                            id="input-id"
                             placeholder="placeholder"
                             required
                           />
                           <button type="submit">submit &lt;button&gt;</button>
                         </div>
                         <div class="datalist-container">
-                          <label for="input-id">&lt;datalist&gt;</label>
+                          <label for="datalist-input-id"
+                            >&lt;datalist&gt;</label
+                          >
                           <input
                             type="text"
-                            id="input-id"
+                            id="datalist-input-id"
                             name="input-datalist"
                             list="datalist-id"
                             placeholder="placeholder"
@@ -157,7 +160,7 @@
                     button.
                   </p>
                   <form method="dialog">
-                    <button>Close &lt;button&gt;</button>
+                    <button type="submit">Close &lt;button&gt;</button>
                   </form>
                 </dialog>
               </div>
@@ -176,7 +179,7 @@
             </div>
           </div>
 
-          <div class="media-container">
+          <div class="media-container" id="media-id">
             <h1 class="media-header">Media</h1>
             <hr />
             <div class="figure-container">
@@ -241,7 +244,7 @@
               <canvas class="canvas-element">
                 Your browser does not support the canvas element.
               </canvas>
-              <button>Clear canvas</button>
+              <button type="button">Clear canvas</button>
             </div>
             <div class="iframe-container">
               <h1 class="tag1">&lt;iframe&gt;</h1>
@@ -262,7 +265,7 @@
             </div>
           </div>
 
-          <div class="text-container">
+          <div class="text-editing-container" id="text-editing-id">
             <h1 class="text-editing-header">Text editing</h1>
             <hr />
             <div class="article">
@@ -368,12 +371,12 @@
                   <h2 class="tag2">&lt;span&gt;</h2>
                   <p>
                     Generic inline element used for targeted styling or
-                    scripting.
+                    scripting. &lt;span&gt;
                     <strong>
                       <span class="span-element"
                         >This text is inside span: styled off.</span
-                      >
-                    </strong>
+                      > </strong
+                    >&lt;/span&gt;
                   </p>
                 </div>
                 <div class="h1-h6 examples">
@@ -395,11 +398,11 @@
                 <div class="noscript">
                   <h2 class="tag2">&lt;noscript&gt;</h2>
                   <p>
-                    Fallback markup rendered if
+                    Fallback markup rendered if &lt;mark&gt;
                     <mark>
                       <abbr title="JavaScript">JS</abbr> is disabled
                     </mark>
-                    in the client browser.
+                    &lt;/mark&gt; in the client browser.
                   </p>
                   <noscript>
                     <p>
@@ -438,7 +441,7 @@
         </main>
       </div>
 
-      <div class="footer">
+      <div class="footer-container" id="footer-id">
         <footer>
           <h1 class="tag1">&lt;footer&gt;</h1>
           <p>
@@ -455,12 +458,49 @@
       </div>
 
       <div class="aside-container">
-        <aside>
+        <aside class="aside-element">
           <h1 class="tag1">&lt;aside&gt;</h1>
           <p>
             Indirectly related content<wbr />(e.g., sidebars, calloutboxes,
             related links).
           </p>
+          <nav class="aside-container-nav">
+            <button
+              class="aside-nav-btn-home"
+              type="button"
+              data-view="home-id"
+            >
+              Home
+            </button>
+            <button
+              class="aside-nav-btn-Interactables"
+              type="button"
+              data-view="interactables-id"
+            >
+              Interactables
+            </button>
+            <button
+              class="aside-nav-li-media"
+              type="button"
+              data-view="media-id"
+            >
+              Media
+            </button>
+            <button
+              class="aside-nav-btn-text-editing"
+              type="button"
+              data-view="text-editing-id"
+            >
+              Text editing
+            </button>
+            <button
+              class="aside-nav-btn-footer"
+              type="button"
+              data-view="footer-id"
+            >
+              Footer
+            </button>
+          </nav>
         </aside>
       </div>
     </div>

@@ -1,5 +1,5 @@
-const form = document.getElementById("form-id");
-const input = document.getElementById("input-main");
+const form = document.querySelector("#form-id");
+const input = document.querySelector("#input-id");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
