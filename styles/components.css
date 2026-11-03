@@ -4,14 +4,23 @@
   border: 2px solid blue;
 
   position: fixed;
-  top: 0;
   right: 0;
-
-  width: clamp(10rem, 15vw, 12rem);
-  height: auto;
   top: 50%;
 
-  transform: translate(0%, -50%);
+  width: 10rem;
+  height: auto;
+
+  transform: translate(+80%, -50%);
+  transition: transform 0.3s ease;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.aside-header-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
@@ -23,6 +32,13 @@
   align-items: center;
 
   padding: var(--space-xs) var(--space-sm);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.6s ease,
+    visibility 0.6s ease;
 }
 
 .aside-element nav {
@@ -33,4 +49,30 @@
 
   width: 100%;
   gap: var(--space-xs);
+}
+
+.aside-header {
+  position: absolute;
+  left: -40px;
+  top: 50%;
+
+  transform: translateY(-50%) rotate(90deg);
+}
+
+/* animation */
+
+.aside-is-open {
+  transform: translate(0%, -50%);
+}
+
+.aside-element-is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.aside-header-is-open {
+  border: 1px solid green;
+
+  width: 100%;
+  text-align: center;
 }
