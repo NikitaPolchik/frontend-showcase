@@ -12,26 +12,30 @@
   </head>
   <body>
     <div class="body-container" id="home-id">
-      <div class="header-container">
-        <div class="header">
-          <header>
-            <h1 class="tag1">&lt;header&gt;</h1>
-            <p>
-              Introductory content, site branding, or page/section navigation.
-            </p>
-          </header>
+      <div class="header-search-container">
+        <div class="header-container">
+          <div class="header-element-container">
+            <header>
+              <h1 class="tag1">&lt;header&gt;</h1>
+              <p>
+                Introductory content, site branding, or page/section navigation.
+              </p>
+            </header>
+          </div>
         </div>
 
-        <div class="search">
-          <search>
-            <h2 class="tag2">&lt;search&gt;</h2>
-            <p>search landmark for all related controls and elements</p>
-            <form>
-              <label>&lt;label&gt;</label>
-              <input placeholder="placeholder" />
-              <button type="submit">search &lt;button&gt;</button>
-            </form>
-          </search>
+        <div class="search-container">
+          <div class="search-element-container">
+            <search class="search-element">
+              <h2 class="tag2">&lt;search&gt;</h2>
+              <p>search landmark for all related controls and elements</p>
+              <form>
+                <label>&lt;label&gt;</label>
+                <input placeholder="placeholder" />
+                <button type="submit">search &lt;button&gt;</button>
+              </form>
+            </search>
+          </div>
         </div>
       </div>
 
@@ -456,55 +460,46 @@
           </div>
         </footer>
       </div>
-
-      <div class="aside-container">
-        <div class="aside-header-container">
-          <h1 class="tag1 aside-header">&lt;aside&gt;</h1>
-          <aside class="aside-element">
-            <p>
-              Indirectly related content<wbr />(e.g., sidebars, calloutboxes,
-              related links).
-            </p>
-            <nav class="aside-container-nav">
-              <button
-                class="aside-nav-btn-home"
-                type="button"
-                data-view="home-id"
-              >
-                Home
-              </button>
-              <button
-                class="aside-nav-btn-Interactables"
-                type="button"
-                data-view="interactables-id"
-              >
-                Interactables
-              </button>
-              <button
-                class="aside-nav-li-media"
-                type="button"
-                data-view="media-id"
-              >
-                Media
-              </button>
-              <button
-                class="aside-nav-btn-text-editing"
-                type="button"
-                data-view="text-editing-id"
-              >
-                Text editing
-              </button>
-              <button
-                class="aside-nav-btn-footer"
-                type="button"
-                data-view="footer-id"
-              >
-                Footer
-              </button>
-            </nav>
-          </aside>
-        </div>
-      </div>
     </div>
   </body>
+  <div class="aside-container">
+    <div class="aside-header-container">
+      <h1 class="tag1 aside-header">&lt;aside&gt;</h1>
+    </div>
+    <aside class="aside-element">
+      <p>
+        Indirectly related content<wbr />(e.g., sidebars, calloutboxes, related
+        links).
+      </p>
+      <nav class="aside-container-nav">
+        <button class="aside-nav-btn-home" type="button" data-view="home-id">
+          Home
+        </button>
+        <button
+          class="aside-nav-btn-Interactables"
+          type="button"
+          data-view="interactables-id"
+        >
+          Interactables
+        </button>
+        <button class="aside-nav-li-media" type="button" data-view="media-id">
+          Media
+        </button>
+        <button
+          class="aside-nav-btn-text-editing"
+          type="button"
+          data-view="text-editing-id"
+        >
+          Text editing
+        </button>
+        <button
+          class="aside-nav-btn-footer"
+          type="button"
+          data-view="footer-id"
+        >
+          Footer
+        </button>
+      </nav>
+    </aside>
+  </div>
 </html>

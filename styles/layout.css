@@ -4,22 +4,34 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  max-width: 90rem;
   margin: 0 auto;
-  padding: 0 var(--space-md);
+  padding: var(--space-xl);
+
+  background-color: lightcoral;
+}
+
+@media (min-width: 1440px) {
+  .body-container {
+    max-width: 90rem;
+  }
 }
 
 .body-container > * {
-  border: 2px solid red;
+  border: 1px solid red;
   width: 100%;
 }
 
-.header-container {
+.header-search-container {
   display: flex;
   justify-content: space-between;
 }
 
-.search {
+.header-container {
+  width: 50%;
+}
+
+.search-container {
+  width: 50%;
   text-align: right;
 }
 
