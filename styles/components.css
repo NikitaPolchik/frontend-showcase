@@ -1,7 +1,7 @@
 /* ASIDE BAR */
 
 .aside-container {
-  background-color: lightgray;
+  background-color: gray;
 
   display: flex;
   flex-direction: column;
@@ -81,17 +81,17 @@
   text-align: center;
 }
 
-/* SEARCH bar */
+/* shift animation */
 
-.search-container:hover .search-element-container {
-  transform: translate(2px, -2px);
-  background-color: rgba(255, 255, 255, 0.15);
+.shift-animation-base:hover .shift-animation-element {
+  transform: translate(3px, -3px);
+  background-color: rgba(255, 255, 255, 0.5);
   transition:
     transform 0.2s ease,
     background-color 0.2s ease;
+  border-radius: 8px;
 }
 
-.search-container {
+.shift-animation-element {
   transform: translate(0px, 0px);
-  /* background-color: white; */
 }
