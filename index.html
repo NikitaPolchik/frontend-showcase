@@ -13,8 +13,8 @@
   <body>
     <div class="body-container" id="home-id">
       <div class="header header-search-container">
-        <div class="header header-container shift-animation-base">
-          <div class="header header-element-container shift-animation-element">
+        <div class="header header-container pop-animation-base">
+          <div class="header header-element-container pop-animation-element">
             <header>
               <h1 class="tag1">&lt;header&gt;</h1>
               <p>
@@ -24,8 +24,8 @@
           </div>
         </div>
 
-        <div class="header search-container shift-animation-base">
-          <div class="header search-element-container shift-animation-element">
+        <div class="header search-container pop-animation-base">
+          <div class="header search-element-container pop-animation-element">
             <search class="search-element">
               <h2 class="tag2">&lt;search&gt;</h2>
               <p>search landmark for all related controls and elements</p>
@@ -39,134 +39,148 @@
         </div>
       </div>
 
-      <div class="nav">
-        <nav>
-          <h1 class="tag1 nav-header">&lt;nav&gt;</h1>
-          <p>Primary navigation links.</p>
-          <ul>
-            <li><a href="#">Placeholder page 1</a></li>
-            <li><a href="#">Placeholder page 2</a></li>
-            <li><a href="#">Placeholder page 3</a></li>
-          </ul>
-        </nav>
+      <div class="pop-animation-base">
+        <div class="nav-element pop-animation-element">
+          <nav>
+            <h1 class="tag1 nav-header">&lt;nav&gt;</h1>
+            <p>Primary navigation links.</p>
+            <ul>
+              <li><a href="#">Placeholder page 1</a></li>
+              <li><a href="#">Placeholder page 2</a></li>
+              <li><a href="#">Placeholder page 3</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
 
       <div class="main-container">
         <main>
-          <h1 class="tag1 main-header">&lt;main&gt;</h1>
-          <p>
-            The <em>dominant</em>, non-repeating content unique to the
-            page<small> (only one per document). </small>
-          </p>
+          <div class="pop-animation-base">
+            <div class="pop-animation-element">
+              <h1 class="tag1 main-header">&lt;main&gt;</h1>
+              <p>
+                The <em>dominant</em>, non-repeating content unique to the
+                page<small> (only one per document). </small>
+              </p>
+            </div>
+          </div>
 
           <div class="interactables-container" id="interactables-id">
             <h1 class="interactables-header">Interactables</h1>
             <hr />
-            <div class="details-container">
-              <details>
-                <summary class="summary">
-                  <span class="summary-details">&lt;details&gt;</span> <br />
-                  interactive collapsible container
-                  <small>(click on &lt;details&gt; to expand/close)</small>
-                </summary>
-                <div class="form-container">
-                  <form id="form-id">
-                    <div class="fieldset">
-                      <fieldset>
-                        <legend>&lt;fieldset&gt;</legend>
-                        <div>
-                          <label for="input-id">&lt;input&gt;</label>
-                          <input
-                            type="text"
-                            id="input-id"
-                            placeholder="placeholder"
-                            required
-                          />
-                          <button type="submit">submit &lt;button&gt;</button>
-                        </div>
-                        <div class="datalist-container">
-                          <label for="datalist-input-id"
-                            >&lt;datalist&gt;</label
-                          >
-                          <input
-                            type="text"
-                            id="datalist-input-id"
-                            name="input-datalist"
-                            list="datalist-id"
-                            placeholder="placeholder"
-                          />
-                          <datalist id="datalist-id">
-                            <option value="value1"></option>
-                            <option value="value2"></option>
-                            <option value="value3"></option>
-                            <option value="value4"></option>
-                          </datalist>
-                        </div>
-                        <div class="select">
-                          <label for="experience">&lt;select&gt;</label>
-                          <select id="experience" name="experience">
-                            <option value="junior">&lt;option1&gt;</option>
-                            <option value="mid">&lt;option2&gt;</option>
-                            <option value="senior">&lt;option3&gt;</option>
-                          </select>
-                        </div>
-                        <div class="meter">
-                          <label for="profile-completion">&lt;meter&gt;</label>
-                          <meter
-                            id="profile-completion"
-                            min="0"
-                            max="100"
-                            value="75"
-                            low="33"
-                            high="66"
-                            optimum="100"
-                          >
-                            75%
-                          </meter>
-                        </div>
-                        <div class="progress">
-                          <label for="upload-progress">&lt;progress&gt;</label>
-                          <progress id="upload-progress" value="60" max="100">
-                            60%
-                          </progress>
-                        </div>
-                        <div class="textarea">
-                          <label for="comments">&lt;textarea&gt;</label><br />
-                          <textarea
-                            id="comments"
-                            name="comments"
-                            rows="4"
-                            cols="40"
-                            placeholder="placeholder"
-                          ></textarea>
-                        </div>
-                      </fieldset>
-                    </div>
-                    <br />
-                  </form>
-                </div>
-              </details>
+            <div class="pop-animation-base">
+              <div class="details-container pop-animation-element">
+                <details>
+                  <summary class="summary">
+                    <span class="summary-details">&lt;details&gt;</span> <br />
+                    interactive collapsible container
+                    <small>(click on &lt;details&gt; to expand/close)</small>
+                  </summary>
+                  <div class="form-container">
+                    <form id="form-id">
+                      <div class="fieldset">
+                        <fieldset>
+                          <legend>&lt;fieldset&gt;</legend>
+                          <div>
+                            <label for="input-id">&lt;input&gt;</label>
+                            <input
+                              type="text"
+                              id="input-id"
+                              placeholder="placeholder"
+                              required
+                            />
+                            <button type="submit">submit &lt;button&gt;</button>
+                          </div>
+                          <div class="datalist-container">
+                            <label for="datalist-input-id"
+                              >&lt;datalist&gt;</label
+                            >
+                            <input
+                              type="text"
+                              id="datalist-input-id"
+                              name="input-datalist"
+                              list="datalist-id"
+                              placeholder="placeholder"
+                            />
+                            <datalist id="datalist-id">
+                              <option value="value1"></option>
+                              <option value="value2"></option>
+                              <option value="value3"></option>
+                              <option value="value4"></option>
+                            </datalist>
+                          </div>
+                          <div class="select">
+                            <label for="experience">&lt;select&gt;</label>
+                            <select id="experience" name="experience">
+                              <option value="junior">&lt;option1&gt;</option>
+                              <option value="mid">&lt;option2&gt;</option>
+                              <option value="senior">&lt;option3&gt;</option>
+                            </select>
+                          </div>
+                          <div class="meter">
+                            <label for="profile-completion"
+                              >&lt;meter&gt;</label
+                            >
+                            <meter
+                              id="profile-completion"
+                              min="0"
+                              max="100"
+                              value="75"
+                              low="33"
+                              high="66"
+                              optimum="100"
+                            >
+                              75%
+                            </meter>
+                          </div>
+                          <div class="progress">
+                            <label for="upload-progress"
+                              >&lt;progress&gt;</label
+                            >
+                            <progress id="upload-progress" value="60" max="100">
+                              60%
+                            </progress>
+                          </div>
+                          <div class="textarea">
+                            <label for="comments">&lt;textarea&gt;</label><br />
+                            <textarea
+                              id="comments"
+                              name="comments"
+                              rows="4"
+                              cols="40"
+                              placeholder="placeholder"
+                            ></textarea>
+                          </div>
+                        </fieldset>
+                      </div>
+                      <br />
+                    </form>
+                  </div>
+                </details>
+              </div>
             </div>
-            <div class="dialog-container">
-              <h2>&lt;dialog&gt;</h2>
-              <p>Native modal or non-modal popup dialog box component.</p>
-              <button
-                type="button"
-                onclick="document.getElementById('dialog-window').showModal()"
-              >
-                modal &lt;button&gt;
-              </button>
-              <div class="dialog-element">
-                <dialog id="dialog-window">
-                  <h3>&lt;dialog&gt;</h3>
-                  <p>
-                    This is dialog window. You can close it by pressing "close"
-                    button.
-                  </p>
-                  <form method="dialog">
-                    <button type="submit">Close &lt;button&gt;</button>
-                  </form>
-                </dialog>
+            <div class="pop-animation-base">
+              <div class="dialog-container pop-animation-element">
+                <h2>&lt;dialog&gt;</h2>
+                <p>Native modal or non-modal popup dialog box component.</p>
+                <button
+                  type="button"
+                  onclick="document.getElementById('dialog-window').showModal()"
+                >
+                  modal &lt;button&gt;
+                </button>
+                <div class="dialog-element">
+                  <dialog id="dialog-window">
+                    <h3>&lt;dialog&gt;</h3>
+                    <p>
+                      This is dialog window. You can close it by pressing
+                      "close" button.
+                    </p>
+                    <form method="dialog">
+                      <button type="submit">Close &lt;button&gt;</button>
+                    </form>
+                  </dialog>
+                </div>
               </div>
             </div>
             <div class="menu">

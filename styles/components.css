@@ -83,15 +83,16 @@
 
 /* shift animation */
 
-.shift-animation-base:hover .shift-animation-element {
+.pop-animation-base:hover .pop-animation-element {
   transform: translate(3px, -3px);
   background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(2px);
   transition:
     transform 0.2s ease,
     background-color 0.2s ease;
   border-radius: 8px;
 }
 
-.shift-animation-element {
+.pop-animation-element {
   transform: translate(0px, 0px);
 }
