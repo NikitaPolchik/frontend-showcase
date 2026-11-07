@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {
@@ -6,10 +10,10 @@
   padding: 0;
 }
 
-html,
+/* html,
 body {
   height: 100vh;
-}
+} */
 
 ul {
   list-style: none;
@@ -26,4 +30,8 @@ select {
 
 menu {
   list-style: none;
+}
+
+dialog {
+  margin: auto;
 }

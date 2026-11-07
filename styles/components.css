@@ -1,7 +1,7 @@
 /* ASIDE BAR */
 
 .aside-container {
-  background-color: gray;
+  background-color: rgb(197, 197, 197);
 
   display: flex;
   flex-direction: column;
@@ -42,8 +42,6 @@
 }
 
 .aside-element nav {
-  border: 2px solid red;
-
   display: flex;
   flex-direction: column;
 
@@ -81,7 +79,7 @@
   text-align: center;
 }
 
-/* shift animation */
+/* pop animation */
 
 .pop-animation-base:hover .pop-animation-element {
   transform: translate(3px, -3px);
@@ -91,6 +89,7 @@
     transform 0.2s ease,
     background-color 0.2s ease;
   border-radius: 8px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.25);
 }
 
 .pop-animation-element {

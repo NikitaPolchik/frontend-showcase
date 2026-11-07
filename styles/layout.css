@@ -18,6 +18,7 @@ body {
   min-height: 100%;
   margin: 0 auto;
   padding: var(--space-xl);
+  gap: var(--space-xl);
 }
 
 @media (min-width: 1440px) {
@@ -27,8 +28,8 @@ body {
 }
 
 .body-container > * {
-  border: 1px solid red;
   width: 100%;
+  /* border: 1px solid red; */
 }
 
 .header {
@@ -56,11 +57,28 @@ body {
   text-align: center;
 }
 
-.dialog-element {
+.main-element {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  gap: var(--space-lg);
+}
+
+.main-element > * {
+  /* border: 2px solid blue; */
+}
+
+.interactables-container,
+.media-container,
+.text-editing-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.interactables-container > *,
+.media-container > *,
+.text-editing-container > * {
+  /* border: 1px solid green; */
 }
 
 .pre-code-container pre {
